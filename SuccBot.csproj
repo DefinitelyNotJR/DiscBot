@@ -5,5 +5,15 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Discord.Net" Version="2.0.0-beta"/>
-  </ItemGroup>
+      </ItemGroup>
+  <ItemGroup>
+  <Reference Include="opus">
+    <HintPath>opus.dll</HintPath>
+  </Reference>
+</ItemGroup>
+<ItemGroup>
+  <Reference Include="libsodium">
+    <HintPath>libsodium.dll</HintPath>
+  </Reference>
+</ItemGroup>
 </Project>

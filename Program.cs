@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Discord.Commands;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+using SuccBot.Services;
+using System.Net.Http;
 
 namespace SuccBot
 {
@@ -24,9 +26,11 @@ namespace SuccBot
             _services = new ServiceCollection()
             .AddSingleton(_client)
             .AddSingleton(_commands)
+            .AddSingleton<HttpClient>()
+            .AddSingleton<PictureService>()
             .BuildServiceProvider();
 
-            string botToken = "NTA0MTg5NDIzNDE2NjM5NTI5.DvELrw.TQcENvy0aSBbwxIrsDoEQpB7-us";
+            string botToken = "NTA0MTg5NDIzNDE2NjM5NTI5.DvJ27w.T-vFEGMGWmTzW3bPi70Uuz8L49U";
 
             _client.Log += Log;
             await RegisterCommandsAsync();

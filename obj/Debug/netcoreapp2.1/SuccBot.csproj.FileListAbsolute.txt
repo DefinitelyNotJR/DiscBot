@@ -9,3 +9,14 @@ C:\programs\VScode\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.AssemblyInfoInputs.ca
 C:\programs\VScode\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.AssemblyInfo.cs
 C:\programs\VScode\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.dll
 C:\programs\VScode\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.pdb
+C:\programs\Bot\SuccBot\bin\Debug\netcoreapp2.1\SuccBot.deps.json
+C:\programs\Bot\SuccBot\bin\Debug\netcoreapp2.1\SuccBot.runtimeconfig.json
+C:\programs\Bot\SuccBot\bin\Debug\netcoreapp2.1\SuccBot.runtimeconfig.dev.json
+C:\programs\Bot\SuccBot\bin\Debug\netcoreapp2.1\SuccBot.dll
+C:\programs\Bot\SuccBot\bin\Debug\netcoreapp2.1\SuccBot.pdb
+C:\programs\Bot\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.csprojAssemblyReference.cache
+C:\programs\Bot\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.csproj.CoreCompileInputs.cache
+C:\programs\Bot\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.AssemblyInfoInputs.cache
+C:\programs\Bot\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.AssemblyInfo.cs
+C:\programs\Bot\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.dll
+C:\programs\Bot\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.pdb

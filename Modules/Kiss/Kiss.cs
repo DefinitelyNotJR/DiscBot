@@ -10,7 +10,8 @@ namespace SuccBot.Modules
         [Command("kiss")]
         public async Task KissAsync()
         {
-            await ReplyAsync(":*");
+            
+            await ReplyAsync($":* {Context.User.Mention}");
         }
     }
 
