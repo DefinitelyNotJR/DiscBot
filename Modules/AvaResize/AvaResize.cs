@@ -10,7 +10,7 @@ using SixLabors.ImageSharp.Processing;
 
 namespace SuccBot.Modules.AvaCrop
 {
-    public class AvaCrop : ModuleBase<SocketCommandContext>
+    public class AvaResize : ModuleBase<SocketCommandContext>
     {
         public PictureService PictureService { get; set; }
 
@@ -19,13 +19,14 @@ namespace SuccBot.Modules.AvaCrop
         {
             string url = user.GetAvatarUrl(ImageFormat.Auto, 512).ToString();
 
-            var stream = await PictureService.GetPictureAsync(url);
+            var inputStream = await PictureService.GetPictureAsync(url);
 
             var outputStream = new MemoryStream();
 
-            using (Image<Rgba32> image = SixLabors.ImageSharp.Image.Load(stream))
+            using (Image<Rgba32> image = SixLabors.ImageSharp.Image.Load(inputStream))
             {
-                image.Mutate(ctx => ctx.Resize(image.Width / 2, image.Height / 2));
+                
+                // image.Mutate(ctx => ctx.Resize(image.Width / 2, image.Height / 2));
                 image.SaveAsPng(outputStream);
             }
 
@@ -34,6 +35,7 @@ namespace SuccBot.Modules.AvaCrop
             await Context.Channel.SendFileAsync(outputStream, "cropped.png");
 
         }
+        
     }
 
 
