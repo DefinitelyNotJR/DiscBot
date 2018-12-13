@@ -5,15 +5,16 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Discord.Net" Version="2.0.0-beta"/>
-      </ItemGroup>
+    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.0-beta0005"/>
+  </ItemGroup>
   <ItemGroup>
-  <Reference Include="opus">
-    <HintPath>opus.dll</HintPath>
-  </Reference>
-</ItemGroup>
-<ItemGroup>
-  <Reference Include="libsodium">
-    <HintPath>libsodium.dll</HintPath>
-  </Reference>
-</ItemGroup>
+    <Reference Include="opus">
+      <HintPath>opus.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="libsodium">
+      <HintPath>libsodium.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

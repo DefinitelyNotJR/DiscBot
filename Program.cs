@@ -8,6 +8,7 @@ using System.Reflection;
 using SuccBot.Services;
 using System.Net.Http;
 
+
 namespace SuccBot
 {
     class Program
@@ -30,7 +31,7 @@ namespace SuccBot
             .AddSingleton<PictureService>()
             .BuildServiceProvider();
 
-            string botToken = "NTA0MTg5NDIzNDE2NjM5NTI5.DvJ27w.T-vFEGMGWmTzW3bPi70Uuz8L49U";
+            string botToken = "NTA0MTg5NDIzNDE2NjM5NTI5.DvK5Yg.JyAPovSTOcFY2c84eeyYnXRl7XA";
 
             _client.Log += Log;
             await RegisterCommandsAsync();

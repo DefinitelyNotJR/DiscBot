@@ -14,7 +14,9 @@ namespace SuccBot.Modules.CatSend
         [Command("cat")]
         public async Task CatSenderAsync()
         {
-            var stream = await PictureService.GetCatPictureAsync();
+            string url = "https://cataas.com/cat";
+
+            var stream = await PictureService.GetPictureAsync(url);
 
             stream.Seek(0, SeekOrigin.Begin);
 
