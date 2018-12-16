@@ -31,7 +31,7 @@ namespace SuccBot
             .AddSingleton<PictureService>()
             .BuildServiceProvider();
 
-            string botToken = "NTA0MTg5NDIzNDE2NjM5NTI5.DvK5Yg.JyAPovSTOcFY2c84eeyYnXRl7XA";
+            string botToken = "NTA0MTg5NDIzNDE2NjM5NTI5.Dvesyw.RQKkr-2vahryVOwlLI1-03_Tg_Y";
 
             _client.Log += Log;
             await RegisterCommandsAsync();
