@@ -29,9 +29,10 @@ namespace SuccBot
             .AddSingleton(_commands)
             .AddSingleton<HttpClient>()
             .AddSingleton<PictureService>()
+            .AddSingleton<AudioService>()
             .BuildServiceProvider();
 
-            string botToken = "NTA0MTg5NDIzNDE2NjM5NTI5.Dvesyw.RQKkr-2vahryVOwlLI1-03_Tg_Y";
+            string botToken = "NTA0MTg5NDIzNDE2NjM5NTI5.Dvj1dA.3g9KGy97ybPM55mANziMLGfIo38";
 
             _client.Log += Log;
             await RegisterCommandsAsync();
