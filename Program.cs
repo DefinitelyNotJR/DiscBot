@@ -32,7 +32,7 @@ namespace SuccBot
             .AddSingleton<AudioService>()
             .BuildServiceProvider();
 
-            string botToken = "NTA0MTg5NDIzNDE2NjM5NTI5.Dvj1dA.3g9KGy97ybPM55mANziMLGfIo38";
+            string botToken = "NTA0MTg5NDIzNDE2NjM5NTI5.DwYv5Q.wb-1S51Du-CthJ9K7SJoBqQL1AE";
 
             _client.Log += Log;
             await RegisterCommandsAsync();
