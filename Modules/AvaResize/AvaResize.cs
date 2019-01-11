@@ -7,7 +7,7 @@ using SuccBot.Services;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
-
+using SuccBot_master.Handlers;
 
 namespace SuccBot.Modules.AvaCrop
 {
@@ -33,8 +33,9 @@ namespace SuccBot.Modules.AvaCrop
 
             outputStream.Seek(0, SeekOrigin.Begin);
 
-            await Context.Channel.SendFileAsync(outputStream, "resizedAvatar.png");
-
+            // await Context.Channel.SendFileAsync(outputStream, "resizedAvatar.png");
+            await Context.Channel.SendFileAsync(outputStream, "stream.png", embed:
+            await EmbedHandler.CreateBasicEmbed($"{user.Username}'s resized avatar", "", "attachment://stream.png", Color.Green));
         }
 
     }

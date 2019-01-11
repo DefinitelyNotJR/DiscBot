@@ -10,6 +10,7 @@ using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
 using SixLabors.Primitives;
 using SixLabors.Shapes;
+using SuccBot_master.Handlers;
 
 namespace SuccBot.Modules
 {
@@ -23,11 +24,13 @@ namespace SuccBot.Modules
 
         public async Task AvaAsync(SocketGuildUser user)
         {
-            var builder = new EmbedBuilder()
-            {
-                ImageUrl = user.GetAvatarUrl(ImageFormat.Auto, 256)
-            };
-            await Context.Channel.SendMessageAsync("", false, builder.Build());
+            // var builder = new EmbedBuilder()
+            // {
+            //     ImageUrl = user.GetAvatarUrl(ImageFormat.Auto, 256)
+            // };
+            // await Context.Channel.SendMessageAsync("", false, builder.Build());
+
+            await Context.Channel.SendMessageAsync("", false, await EmbedHandler.CreateBasicEmbed($"{user.Username}'s avatar", "", user.GetAvatarUrl(ImageFormat.Auto, 512), Color.DarkOrange));
         }
     }
 }

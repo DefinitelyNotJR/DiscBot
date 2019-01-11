@@ -1,61 +1,52 @@
 using System;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
 using SuccBot.Services;
+using Victoria;
+using Victoria.Entities;
 
 namespace SuccBot.Modules.Music
 {
     public class AudioModule : ModuleBase<ICommandContext>
     {
-        // Scroll down further for the AudioService.
-        // Like, way down
-        private readonly AudioService _service;
 
-        // Remember to add an instance of the AudioService
-        // to your IServiceCollection when you initialize your bot
-        public AudioModule(AudioService service)
+        public DiscordSocketClient DiscordSocketClient { get; set; }
+
+        private Lavalink _lavalink;
+        public AudioModule(Lavalink lavalink)
         {
-            _service = service;
+            _lavalink = lavalink;
         }
 
-        // You *MUST* mark these commands with 'RunMode.Async'
-        // otherwise the bot will not respond until the Task times out.
-        [Command("join", RunMode = RunMode.Async)]
-        public async Task JoinCmd(IVoiceChannel channel = null)
+        [Command("Join", RunMode = RunMode.Async)]
+
+        public async Task JoinAsync()
         {
-            await _service.JoinAudio(Context.Guild, (Context.User as IVoiceState).VoiceChannel);
+            // await ReplyAsync("", false, await AudioService.JoinOrPlayAsync((SocketGuildUser)Context.User, Context.Channel, Context.Guild.Id));
+            var user = (SocketGuildUser)Context.User;
+            var node = await _lavalink.AddNodeAsync(DiscordSocketClient, new Configuration
+            {
+                Severity = LogSeverity.Info
+            });
+            await node.ConnectAsync(user.VoiceChannel);
         }
 
-        // Remember to add preconditions to your commands,
-        // this is merely the minimal amount necessary.
-        // Adding more commands of your own is also encouraged.
-        [Command("leave", RunMode = RunMode.Async)]
-        public async Task LeaveCmd()
+        [Command("Play", RunMode = RunMode.Async)]
+
+        public async Task PlayAsync([Remainder] string song)
         {
-            await _service.LeaveAudio(Context.Guild);
+            LavaTrack track;
+            var search = await _lavalink.DefaultNode.SearchYouTubeAsync(song);
+            track = search.Tracks.FirstOrDefault();
+            var player = _lavalink.DefaultNode.GetPlayer(Context.Guild.Id);
+            await player.PlayAsync(track);
         }
+        // => await ReplyAsync("", false, await AudioService.ConnectAndPlayAsync(channel);
 
-        [Command("play", RunMode = RunMode.Async)]
-        public async Task PlayCmd([Remainder] string song = "Modules/Music/Songs/1.mp3")
-        {
-            await _service.SendAudioAsync(Context.Guild, Context.Channel, song);
-        }
-
-        // [Command("join", RunMode = RunMode.Async)]
-        // public async Task JoinChannel(IVoiceChannel channel = null)
-        // {
-        //     channel = channel ?? (Context.Message.Author as IGuildUser)?.VoiceChannel;
-
-        //     if (channel is null)
-        //     {
-        //         await ReplyAsync("User must be in a voice channel for bot to work");
-        //     }
-
-
-        //     var audioclient = await channel.ConnectAsync();
-        // }
+        // (SocketGuildUser)Context.User, Context.Channel, Context.Guild.Id)
     }
 }

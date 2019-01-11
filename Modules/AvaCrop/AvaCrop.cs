@@ -10,13 +10,14 @@ using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
 using SixLabors.Primitives;
 using SixLabors.Shapes;
+using SuccBot_master.Handlers;
 
 namespace SuccBot.Modules.AvaCrop
 {
-    
-   public class Avacrop : ModuleBase<SocketCommandContext>
+
+    public class Avacrop : ModuleBase<SocketCommandContext>
     {
-        
+
         public PictureService PictureService { get; set; }
 
         [Command("crop", RunMode = RunMode.Async)]
@@ -33,7 +34,7 @@ namespace SuccBot.Modules.AvaCrop
             using (Image<Rgba32> image = SixLabors.ImageSharp.Image.Load(inputStream))
             {
 
-                using (Image<Rgba32> outputImage = image.Clone(x => x.ConvertToAvatar(new Size(200,200),100)))
+                using (Image<Rgba32> outputImage = image.Clone(x => x.ConvertToAvatar(new Size(200, 200), 100)))
                 {
                     outputImage.SaveAsPng(outputStream);
                 }
@@ -41,12 +42,10 @@ namespace SuccBot.Modules.AvaCrop
 
             outputStream.Seek(0, SeekOrigin.Begin);
 
-            await Context.Channel.SendFileAsync(outputStream, "croppedAvatar.png");
-
+            // await Context.Channel.SendFileAsync(outputStream, "croppedAvatar.png");
+            await Context.Channel.SendFileAsync(outputStream, "stream.png", embed:
+            await EmbedHandler.CreateBasicEmbed($"{user.Username}'s cropped avatar", "", "attachment://stream.png", Color.DarkOrange));
         }
-
     }
-
-
 }
 
