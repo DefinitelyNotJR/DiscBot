@@ -2864,17 +2864,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\programs\\Bot\\Succ\\SuccBot\\SuccBot.csproj",
+      "projectUniqueName": "c:\\programs\\SuccBot\\SuccBot.csproj",
       "projectName": "SuccBot",
-      "projectPath": "C:\\programs\\Bot\\Succ\\SuccBot\\SuccBot.csproj",
+      "projectPath": "c:\\programs\\SuccBot\\SuccBot.csproj",
       "packagesPath": "C:\\Users\\Trading\\.nuget\\packages\\",
-      "outputPath": "C:\\programs\\Bot\\Succ\\SuccBot\\obj\\",
+      "outputPath": "c:\\programs\\SuccBot\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\programs\\Bot\\Succ\\SuccBot\\NuGet.Config",
+        "c:\\programs\\SuccBot\\NuGet.Config",
         "C:\\Users\\Trading\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
