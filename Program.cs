@@ -47,22 +47,22 @@ namespace SuccBot
             await Task.Delay(-1);
         }
 
-        // private async Task OnReadyAsync()
-        // {
-        //     try
-        //     {
-        //         var node = await _lavalink.AddNodeAsync(_client, new Configuration
-        //         {
-        //             Severity = LogSeverity.Info
-        //         });
-        //         node.TrackFinished += _services.GetService<AudioService>().OnFinshed;
-        //         await _client.SetGameAsync(Global.Config.GameStatus);
-        //     }
-        //     catch (Exception ex)
-        //     {
-        //         await LoggingService.LogInformationAsync(ex.Source, ex.Message);
-        //     }
-        // }
+        private async Task OnReadyAsync()
+        {
+            // try
+            // {
+            //     var node = await _lavalink.AddNodeAsync(_client, new Configuration
+            //     {
+            //         Severity = LogSeverity.Info
+            //     });
+            //     node.TrackFinished += _services.GetService<AudioService>().OnFinshed;
+            await _client.SetGameAsync(Global.Config.GameStatus);
+            // }
+            // catch (Exception ex)
+            // {
+            //     await LoggingService.LogInformationAsync(ex.Source, ex.Message);
+            // }
+        }
 
         private async Task LogAsync(LogMessage logMessage)
         {
@@ -74,7 +74,7 @@ namespace SuccBot
             _client.Log += LogAsync;
             _services.GetRequiredService<CommandService>().Log += LogAsync;
             _lavalink.Log += LogAsync;
-            //_client.Ready += OnReadyAsync;
+            _client.Ready += OnReadyAsync;
         }
 
         public async Task RegisterCommandsAsync()
