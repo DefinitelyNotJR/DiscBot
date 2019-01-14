@@ -74,7 +74,7 @@ namespace SuccBot
             _client.Log += LogAsync;
             _services.GetRequiredService<CommandService>().Log += LogAsync;
             _lavalink.Log += LogAsync;
-            // _client.Ready += OnReadyAsync;
+            //_client.Ready += OnReadyAsync;
         }
 
         public async Task RegisterCommandsAsync()

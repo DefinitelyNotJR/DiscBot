@@ -9,41 +9,31 @@ namespace SuccBot.Modules.MentionByNickname
 {
     public class NicknameMention : ModuleBase<SocketCommandContext>
     {
-        [Command("mention")]
-        public async Task MentionAsync([Remainder]string nickname)
+        [Command("mention", RunMode = RunMode.Async)]
+        public async Task MentionAsync([Remainder]string message)
         {
-            var users = Context.Guild.Users;
-            List<IUser> usersList = new List<IUser>();
-            foreach (IUser user in users)
+            var user = Context.Message.MentionedUsers.FirstOrDefault();
+
+            if (user == null)
             {
-                if (user.Username.ToLower().Contains(nickname.ToLower())
-                || user.Mention.ToLower().Contains(nickname.ToLower()))
+                var users = Context.Guild.Users;
+                List<SocketGuildUser> userList = new List<SocketGuildUser>();
+                foreach (SocketGuildUser u in users)
                 {
-                    usersList.Add(user);
+                    if (u.Username.ToLower().Contains(message.ToLower()))
+                    {
+                        userList.Add(u);
+                    }
                 }
+                var maybeTheRightUser = userList.First();
+
+                await ReplyAsync($"You have been mentioned, {maybeTheRightUser.Mention}");
             }
-            var maybeTheRightUser = usersList.First();
-
-            await ReplyAsync($"You have been mentioned, {maybeTheRightUser.Mention}");
+            
+            else
+            {
+                await ReplyAsync($"Ping ping {user.Mention}");
+            }
         }
-
-        // public async Task MentionAsync([Remainder]string arg)
-        // {
-        //     var users = Context.Guild.Users;
-        //     List<SocketGuildUser> userList = new List<SocketGuildUser>();
-        //     foreach (SocketGuildUser user in users)
-        //     {
-        //         if (user.Nickname.ToLower().Contains(arg.ToLower())
-        //         || user.Username.ToLower().Contains(arg.ToLower())
-        //         || user.Mention.ToLower().Contains(arg.ToLower()))
-        //         {
-        //             userList.Add(user);
-        //         }
-        //     }
-
-        //     var userNeeded = userList.FirstOrDefault();
-
-        //     await ReplyAsync($"You have been mentioned, {userNeeded.Mention}");
-        // }
     }
 }
