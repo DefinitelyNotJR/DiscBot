@@ -48,25 +48,21 @@ namespace SuccBot
             await Task.Delay(-1);
         }
 
-        private async Task OnReadyAsync()
+        public async Task OnReadyAsync()
         {
-            // try
-            // {
-            //     var node = await _lavalink.AddNodeAsync(_client, new Configuration
-            //     {
-            //         Severity = LogSeverity.Info
-            //     });
-            //     node.TrackFinished += _services.GetService<AudioService>().OnFinshed;
-            var node = await _lavalink.AddNodeAsync(_client, new Configuration
+            try
             {
-                Severity = LogSeverity.Info
-            });
-            await _client.SetGameAsync(Global.Config.GameStatus);
-            // }
-            // catch (Exception ex)
-            // {
-            //     await LoggingService.LogInformationAsync(ex.Source, ex.Message);
-            // }
+                var node = await _lavalink.AddNodeAsync(_client, new Configuration
+                {
+                    Severity = LogSeverity.Info
+                });
+                await _client.SetGameAsync(Global.Config.GameStatus);
+            }
+
+            catch (Exception ex)
+            {
+                await LoggingService.LogInformationAsync(ex.Source, ex.Message);
+            }
         }
 
         private async Task LogAsync(LogMessage logMessage)
