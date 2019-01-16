@@ -1,4 +1,4 @@
-2019-01-14 13:54:27.700  INFO 1464 --- [main] lavalink.server.Launcher                 : 
+2019-01-16 11:26:24.175  INFO 8664 --- [main] lavalink.server.Launcher                 : 
 
 [32m       .  [31m _                  _ _       _    [32m__ _ _
 [32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
@@ -16,7 +16,7 @@
 	JVM:            11.0.1
 	Lavaplayer      1.3.10
 
-2019-01-14 13:54:28.114  INFO 1464 --- [main] o.s.boot.SpringApplication               :        .   _                  _ _       _    __ _ _
+2019-01-16 11:26:24.578  INFO 8664 --- [main] o.s.boot.SpringApplication               :        .   _                  _ _       _    __ _ _
       /\\ | | __ ___   ____ _| (_)_ __ | | __\ \ \ \
      ( ( )| |/ _` \ \ / / _` | | | '_ \| |/ / \ \ \ \
       \\/ | | (_| |\ V / (_| | | | | | |   <   ) ) ) )
@@ -27,72 +27,83 @@
     :: Spring Boot ::        (v2.0.4.RELEASE)
 
 
-2019-01-14 13:54:29.683  INFO 1464 --- [main] lavalink.server.Launcher                 : Starting Launcher on DESKTOP-HJK94VR with PID 1464 (C:\programs\SuccBot\Lavalink.jar started by Trading in C:\programs\SuccBot)
-2019-01-14 13:54:29.685  INFO 1464 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
-2019-01-14 13:54:30.783  INFO 1464 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@45ca843: startup date [Mon Jan 14 13:54:30 EET 2019]; root of context hierarchy
-2019-01-14 13:54:31.178  WARN 1464 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2019-01-14 13:54:33.166  INFO 1464 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
-2019-01-14 13:54:33.235  INFO 1464 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
-2019-01-14 13:54:33.725  WARN 1464 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
-2019-01-14 13:54:33.731  WARN 1464 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2019-01-14 13:54:33.769  INFO 1464 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
-2019-01-14 13:54:33.770  INFO 1464 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2986 ms
-2019-01-14 13:54:33.873  INFO 1464 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
-2019-01-14 13:54:33.886  INFO 1464 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-01-14 13:54:33.887  INFO 1464 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2019-01-14 13:54:33.888  INFO 1464 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2019-01-14 13:54:33.888  INFO 1464 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2019-01-14 13:54:33.889  INFO 1464 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'responseHeaderFilter' to: [/*]
-2019-01-14 13:54:37.533  INFO 1464 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
-2019-01-14 13:54:37.726  INFO 1464 --- [main] l.s.c.AudioSendFactoryConfiguration      : OS: Windows 10, Arch: amd64
-2019-01-14 13:54:37.729  INFO 1464 --- [main] l.s.c.AudioSendFactoryConfiguration      : JDA-NAS supported system detected. Enabled native audio sending.
-2019-01-14 13:54:37.732  INFO 1464 --- [main] l.s.c.AudioSendFactoryConfiguration      : Setting buffer to 400ms
-2019-01-14 13:54:37.734  INFO 1464 --- [main] l.s.c.AudioSendFactoryConfiguration      : Setting playlist load limit to 6
-2019-01-14 13:54:38.580  WARN 1464 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
-2019-01-14 13:54:38.734  INFO 1464 --- [main] o.s.w.s.s.s.WebSocketHandlerMapping      : Root mapping to handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
-2019-01-14 13:54:39.272  INFO 1464 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-01-14 13:54:39.564  INFO 1464 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@45ca843: startup date [Mon Jan 14 13:54:30 EET 2019]; root of context hierarchy
-2019-01-14 13:54:39.649  INFO 1464 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/debug/nashorn],methods=[POST]}" onto public java.lang.String lavalink.server.util.DebugRestHandler.getLoadTracks(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
-2019-01-14 13:54:39.654  INFO 1464 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/decodetrack],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.String> lavalink.server.player.AudioLoaderRestHandler.getDecodeTrack(javax.servlet.http.HttpServletRequest,java.lang.String) throws java.io.IOException
-2019-01-14 13:54:39.656  INFO 1464 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loadtracks],methods=[GET],produces=[application/json]}" onto public java.util.concurrent.CompletionStage<org.springframework.http.ResponseEntity<java.lang.String>> lavalink.server.player.AudioLoaderRestHandler.getLoadTracks(javax.servlet.http.HttpServletRequest,java.lang.String)
-2019-01-14 13:54:39.657  INFO 1464 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/decodetracks],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.String> lavalink.server.player.AudioLoaderRestHandler.postDecodeTracks(javax.servlet.http.HttpServletRequest,java.lang.String) throws java.io.IOException
-2019-01-14 13:54:39.661  INFO 1464 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2019-01-14 13:54:39.662  INFO 1464 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2019-01-14 13:54:39.683  INFO 1464 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-01-14 13:54:39.684  INFO 1464 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2019-01-14 13:54:39.923  INFO 1464 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2019-01-14 13:54:39.939  INFO 1464 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
-2019-01-14 13:54:39.988  INFO 1464 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
-2019-01-14 13:54:40.000  INFO 1464 --- [main] lavalink.server.Launcher                 : Started Launcher in 14.068 seconds (JVM running for 15.945)
-2019-01-14 13:54:46.342  INFO 1464 --- [XNIO-2 task-1] io.undertow.servlet                      : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2019-01-14 13:54:46.343  INFO 1464 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2019-01-14 13:54:46.356  INFO 1464 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
-2019-01-14 13:54:46.390  INFO 1464 --- [XNIO-2 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:50938
-2019-01-14 13:54:46.470  INFO 1464 --- [XNIO-2 task-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
-2019-01-14 13:54:46.604  INFO 1464 --- [XNIO-2 task-1] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:50938
-2019-01-14 14:02:06.131  INFO 1464 --- [XNIO-2 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:51297
-2019-01-14 14:02:06.143  INFO 1464 --- [XNIO-2 task-2] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
-2019-01-14 14:02:06.153  INFO 1464 --- [XNIO-2 task-2] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:51297
-2019-01-14 14:02:15.191  INFO 1464 --- [XNIO-2 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:51306
-2019-01-14 14:02:15.199  INFO 1464 --- [XNIO-2 task-3] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
-2019-01-14 14:02:15.208  INFO 1464 --- [XNIO-2 task-3] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:51306
-2019-01-14 14:02:15.551  INFO 1464 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"8d7dea9ba427bcd2728d875fb145911e","event":{"token":"7c9120d1ff8b5564","guild_id":"137136959729434624","endpoint":"eu-central126.discord.gg:80"},"op":"voiceUpdate","guildId":"137136959729434624"}
-2019-01-14 14:02:50.038  INFO 1464 --- [XNIO-2 task-4] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
-2019-01-14 14:02:51.128  INFO 1464 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: death grips mashup
-2019-01-14 14:02:56.474  INFO 1464 --- [XNIO-2 task-6] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
-2019-01-14 14:02:56.999  INFO 1464 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: death grips
-2019-01-14 14:21:20.710  INFO 1464 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:50938 -- CloseStatus[code=1006, reason=]
-2019-01-14 14:21:20.710  INFO 1464 --- [XNIO-2 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:51297 -- CloseStatus[code=1006, reason=]
-2019-01-14 14:21:20.714  INFO 1464 --- [XNIO-2 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2019-01-14 14:21:20.714  INFO 1464 --- [XNIO-2 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2019-01-14 14:21:20.716  INFO 1464 --- [XNIO-2 I/O-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
-2019-01-14 14:21:20.716  INFO 1464 --- [XNIO-2 I/O-2] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
-2019-01-14 14:21:20.748  INFO 1464 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:51306 -- CloseStatus[code=1006, reason=]
-2019-01-14 14:21:20.750  INFO 1464 --- [XNIO-2 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2019-01-14 14:21:20.751  INFO 1464 --- [XNIO-2 I/O-2] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
-2019-01-14 14:21:51.939  INFO 1464 --- [XNIO-2 task-8] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:52593
-2019-01-14 14:21:51.949  INFO 1464 --- [XNIO-2 task-8] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
-2019-01-14 14:21:51.954  INFO 1464 --- [XNIO-2 task-8] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:52593
-2019-01-14 14:48:07.571  INFO 1464 --- [XNIO-2 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:52593 -- CloseStatus[code=1006, reason=]
-2019-01-14 14:48:07.577  INFO 1464 --- [XNIO-2 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2019-01-14 14:48:07.583  INFO 1464 --- [XNIO-2 I/O-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2019-01-16 11:26:25.931  INFO 8664 --- [main] lavalink.server.Launcher                 : Starting Launcher on DESKTOP-HJK94VR with PID 8664 (C:\programs\SuccBot\Lavalink.jar started by Trading in C:\programs\SuccBot)
+2019-01-16 11:26:25.945  INFO 8664 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2019-01-16 11:26:26.302  INFO 8664 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@ba54932: startup date [Wed Jan 16 11:26:26 EET 2019]; root of context hierarchy
+2019-01-16 11:26:26.648  WARN 8664 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-01-16 11:26:31.922  INFO 8664 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2019-01-16 11:26:31.998  INFO 8664 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2019-01-16 11:26:33.486  WARN 8664 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2019-01-16 11:26:33.488  WARN 8664 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2019-01-16 11:26:33.560  INFO 8664 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2019-01-16 11:26:33.562  INFO 8664 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7259 ms
+2019-01-16 11:26:33.689  INFO 8664 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-16 11:26:33.742  INFO 8664 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-16 11:26:33.767  INFO 8664 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-16 11:26:33.807  INFO 8664 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-16 11:26:33.823  INFO 8664 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-16 11:26:33.869  INFO 8664 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'responseHeaderFilter' to: [/*]
+2019-01-16 11:26:40.410  INFO 8664 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2019-01-16 11:26:40.633  INFO 8664 --- [main] l.s.c.AudioSendFactoryConfiguration      : OS: Windows 10, Arch: amd64
+2019-01-16 11:26:40.636  INFO 8664 --- [main] l.s.c.AudioSendFactoryConfiguration      : JDA-NAS supported system detected. Enabled native audio sending.
+2019-01-16 11:26:40.640  INFO 8664 --- [main] l.s.c.AudioSendFactoryConfiguration      : Setting buffer to 400ms
+2019-01-16 11:26:40.641  INFO 8664 --- [main] l.s.c.AudioSendFactoryConfiguration      : Setting playlist load limit to 6
+2019-01-16 11:26:42.373  WARN 8664 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2019-01-16 11:26:42.573  INFO 8664 --- [main] o.s.w.s.s.s.WebSocketHandlerMapping      : Root mapping to handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2019-01-16 11:26:43.005  INFO 8664 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 11:26:43.320  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@ba54932: startup date [Wed Jan 16 11:26:26 EET 2019]; root of context hierarchy
+2019-01-16 11:26:43.404  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/debug/nashorn],methods=[POST]}" onto public java.lang.String lavalink.server.util.DebugRestHandler.getLoadTracks(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2019-01-16 11:26:43.414  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/decodetrack],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.String> lavalink.server.player.AudioLoaderRestHandler.getDecodeTrack(javax.servlet.http.HttpServletRequest,java.lang.String) throws java.io.IOException
+2019-01-16 11:26:43.416  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loadtracks],methods=[GET],produces=[application/json]}" onto public java.util.concurrent.CompletionStage<org.springframework.http.ResponseEntity<java.lang.String>> lavalink.server.player.AudioLoaderRestHandler.getLoadTracks(javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-01-16 11:26:43.420  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/decodetracks],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.String> lavalink.server.player.AudioLoaderRestHandler.postDecodeTracks(javax.servlet.http.HttpServletRequest,java.lang.String) throws java.io.IOException
+2019-01-16 11:26:43.429  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-16 11:26:43.434  INFO 8664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-16 11:26:43.468  INFO 8664 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 11:26:43.469  INFO 8664 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-16 11:26:43.783  INFO 8664 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-16 11:26:43.801  INFO 8664 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-01-16 11:26:43.898  INFO 8664 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2019-01-16 11:26:43.914  INFO 8664 --- [main] lavalink.server.Launcher                 : Started Launcher in 21.72 seconds (JVM running for 23.7)
+2019-01-16 11:26:51.368  INFO 8664 --- [XNIO-2 task-1] io.undertow.servlet                      : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-16 11:26:51.369  INFO 8664 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-16 11:26:51.402  INFO 8664 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2019-01-16 11:26:51.499  INFO 8664 --- [XNIO-2 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:55126
+2019-01-16 11:26:51.673  INFO 8664 --- [XNIO-2 task-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2019-01-16 11:26:51.902  INFO 8664 --- [XNIO-2 task-1] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:55126
+2019-01-16 11:27:25.063  INFO 8664 --- [XNIO-2 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:55195
+2019-01-16 11:27:25.073  INFO 8664 --- [XNIO-2 task-2] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2019-01-16 11:27:25.083  INFO 8664 --- [XNIO-2 task-2] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:55195
+2019-01-16 11:27:25.393  INFO 8664 --- [XNIO-2 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"97f18c61cdf62fd55ed12f608fed1ca9","event":{"token":"ff6cc7d3a47b7467","guild_id":"137136959729434624","endpoint":"eu-central203.discord.gg:80"},"op":"voiceUpdate","guildId":"137136959729434624"}
+2019-01-16 11:27:56.651  INFO 8664 --- [XNIO-2 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:55254
+2019-01-16 11:27:56.655  INFO 8664 --- [XNIO-2 task-3] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2019-01-16 11:27:56.660  INFO 8664 --- [XNIO-2 task-3] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:55254
+2019-01-16 11:27:56.943  INFO 8664 --- [XNIO-2 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"97f18c61cdf62fd55ed12f608fed1ca9","event":{"token":"55b1bae5c9838d1e","guild_id":"136520569297436672","endpoint":"russia273.discord.gg:80"},"op":"voiceUpdate","guildId":"136520569297436672"}
+2019-01-16 11:28:18.560  INFO 8664 --- [XNIO-2 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:55195 -- CloseStatus[code=1006, reason=]
+2019-01-16 11:28:18.560  INFO 8664 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:55254 -- CloseStatus[code=1006, reason=]
+2019-01-16 11:28:18.601  INFO 8664 --- [XNIO-2 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2019-01-16 11:28:18.601  INFO 8664 --- [XNIO-2 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2019-01-16 11:28:18.602  INFO 8664 --- [XNIO-2 I/O-3] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2019-01-16 11:28:18.603  INFO 8664 --- [XNIO-2 I/O-2] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2019-01-16 11:28:18.606  INFO 8664 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:55126 -- CloseStatus[code=1006, reason=]
+2019-01-16 11:28:18.607  INFO 8664 --- [XNIO-2 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2019-01-16 11:28:18.670  INFO 8664 --- [XNIO-2 I/O-2] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2019-01-16 11:29:13.494  INFO 8664 --- [XNIO-2 task-4] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:55401
+2019-01-16 11:29:13.521  INFO 8664 --- [XNIO-2 task-4] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2019-01-16 11:29:13.534  INFO 8664 --- [XNIO-2 task-4] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:55401
+2019-01-16 11:30:38.387  INFO 8664 --- [XNIO-2 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:55401 -- CloseStatus[code=1006, reason=]
+2019-01-16 11:30:38.442  INFO 8664 --- [XNIO-2 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2019-01-16 11:30:38.450  INFO 8664 --- [XNIO-2 I/O-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2019-01-16 11:40:01.532  INFO 8664 --- [XNIO-2 task-5] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:56456
+2019-01-16 11:40:01.635  INFO 8664 --- [XNIO-2 task-5] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2019-01-16 11:40:01.674  INFO 8664 --- [XNIO-2 task-5] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:56456
+2019-01-16 11:40:44.366  INFO 8664 --- [XNIO-2 task-6] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:56532
+2019-01-16 11:40:44.391  INFO 8664 --- [XNIO-2 task-6] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2019-01-16 11:40:44.418  INFO 8664 --- [XNIO-2 task-6] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:56532
+2019-01-16 11:40:44.662  INFO 8664 --- [XNIO-2 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"b772f8a6b5fa67d8bc52188726435757","event":{"token":"e5e8968db2250e05","guild_id":"137136959729434624","endpoint":"eu-central203.discord.gg:80"},"op":"voiceUpdate","guildId":"137136959729434624"}
+2019-01-16 11:40:46.658  INFO 8664 --- [XNIO-2 I/O-4] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"137136959729434624"}
+2019-01-16 11:42:02.762  INFO 8664 --- [XNIO-2 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:56456 -- CloseStatus[code=1006, reason=]
+2019-01-16 11:42:02.764  INFO 8664 --- [XNIO-2 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2019-01-16 11:42:02.765  INFO 8664 --- [XNIO-2 I/O-4] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2019-01-16 11:42:02.768  INFO 8664 --- [XNIO-2 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:56532 -- CloseStatus[code=1006, reason=]
+2019-01-16 11:42:02.768  INFO 8664 --- [XNIO-2 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2019-01-16 11:42:02.769  INFO 8664 --- [XNIO-2 I/O-4] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.

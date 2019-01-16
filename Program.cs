@@ -33,6 +33,7 @@ namespace SuccBot
             .AddSingleton(_commands)
             .AddSingleton<HttpClient>()
             .AddSingleton<Lavalink>()
+            .AddSingleton<AudioService>()
             .AddSingleton<PictureService>()
             .BuildServiceProvider();
 
@@ -56,6 +57,10 @@ namespace SuccBot
             //         Severity = LogSeverity.Info
             //     });
             //     node.TrackFinished += _services.GetService<AudioService>().OnFinshed;
+            var node = await _lavalink.AddNodeAsync(_client, new Configuration
+            {
+                Severity = LogSeverity.Info
+            });
             await _client.SetGameAsync(Global.Config.GameStatus);
             // }
             // catch (Exception ex)

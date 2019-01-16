@@ -22,7 +22,7 @@ namespace SuccBot.Modules.Music
             _lavalink = lavalink;
         }
 
-        [Command("Join", RunMode = RunMode.Async)]
+        [Command("hehe", RunMode = RunMode.Async)]
 
         public async Task JoinAsync()
         {
@@ -35,7 +35,7 @@ namespace SuccBot.Modules.Music
             await node.ConnectAsync(user.VoiceChannel);
         }
 
-        [Command("Play", RunMode = RunMode.Async)]
+        [Command("heheh", RunMode = RunMode.Async)]
 
         public async Task PlayAsync([Remainder] string song)
         {
