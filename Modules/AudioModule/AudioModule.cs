@@ -26,5 +26,29 @@ namespace SuccBot.Modules.AudioModule
         {
             await ReplyAsync("", false, await AudioService.LeaveAsync(Context.Guild.Id));
         }
+
+        [Command("skip", RunMode = RunMode.Async)]
+        public async Task SkipAsync()
+        {
+            await AudioService.SkipAsync(Context.Guild.Id);
+        }
+
+        [Command("stop", RunMode = RunMode.Async)]
+        public async Task StopAsync()
+        {
+            await AudioService.StopAsync(Context.Guild.Id);
+        }
+
+        [Command("volume", RunMode = RunMode.Async)]
+        public async Task VolumeAsync(int volume)
+        {
+            await AudioService.VolumeAsync(Context.Guild.Id, volume);
+        }
+
+        [Command("np", RunMode = RunMode.Async)]
+        public async Task NowPlayingAsync()
+        {
+            await ReplyAsync("", false, await AudioService.NowPlayingAsync(Context.Guild.Id));
+        }
     }
 }

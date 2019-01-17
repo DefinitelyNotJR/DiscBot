@@ -17,8 +17,8 @@ namespace SuccBot.Services
     {
         private Lavalink _lavalink;
         private DiscordSocketClient _client;
-        
-        
+
+
         public AudioService(Lavalink lavalink, DiscordSocketClient client)
         {
             _lavalink = lavalink;
@@ -34,7 +34,7 @@ namespace SuccBot.Services
         {
             if (user.VoiceChannel == null)
                 return await EmbedHandler.CreateErrorEmbed("Music, Join command", "Please, join voice channel first.");
-            
+
             await _lavalink.DefaultNode.ConnectAsync(user.VoiceChannel, textChannel);
             return await EmbedHandler.CreateBasicEmbed("Music", $"Bot is now connected to {user.VoiceChannel.Name} and ready to play music", "", Color.Green);
         }
@@ -57,6 +57,70 @@ namespace SuccBot.Services
             return await EmbedHandler.CreateBasicEmbed("Music", $"Now Playing: {track.Title}\nUrl: {track.Uri}", "", Color.Blue);
 
         }
+
+        public async Task SkipAsync(ulong guildId)
+        {
+            try
+            {
+                var player = _lavalink.DefaultNode.GetPlayer(guildId);
+                if (player.Queue.Count == 1)
+                {
+                    await StopAsync(guildId);
+                }
+                else
+                {
+                    await player.SkipAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                await LoggingService.LogInformationAsync(ex.Source, ex.Message);
+            }
+        }
+
+        public async Task StopAsync(ulong guildId)
+        {
+            try
+            {
+                var player = _lavalink.DefaultNode.GetPlayer(guildId);
+                await player.StopAsync();
+            }
+            catch (Exception ex)
+            {
+                await LoggingService.LogInformationAsync(ex.Source, ex.Message);
+            }
+        }
+
+        public async Task<Embed> NowPlayingAsync(ulong guildId)
+        {
+            try
+            {
+                var player = _lavalink.DefaultNode.GetPlayer(guildId);
+                return await EmbedHandler.CreateBasicEmbed("Music", $"{player.CurrentTrack.Title} is now playing", "", Color.Blue);
+            }
+            catch (Exception ex)
+            {
+                await LoggingService.LogInformationAsync(ex.Source, ex.Message);
+                return await EmbedHandler.CreateErrorEmbed(ex.Source, ex.Message);
+            }
+        }
+
+        public async Task VolumeAsync(ulong guildId, int volume)
+        {
+            try
+            {
+                if (volume < 0 || volume > 150)
+                {
+                    return;
+                }
+                var player = _lavalink.DefaultNode.GetPlayer(guildId);
+                await player.SetVolumeAsync(volume);
+            }
+            catch (Exception ex)
+            {
+                await LoggingService.LogInformationAsync(ex.Source, ex.Message);
+            }
+        }
         public async Task<Embed> LeaveAsync(ulong guildId)
         {
             try
@@ -69,7 +133,7 @@ namespace SuccBot.Services
                 var channelName = player.VoiceChannel.Name;
                 await _lavalink.DefaultNode.DisconnectAsync(guildId);
                 await LoggingService.LogInformationAsync("Music", $"Bot has left {channelName}.");
-                return await EmbedHandler.CreateBasicEmbed("Music", $"I've left {channelName}. Thank you for playing moosik.", "", Color.Blue);
+                return await EmbedHandler.CreateBasicEmbed("Music", $"Disconnected from {channelName} voice channel.", "", Color.Blue);
             }
             catch (InvalidOperationException ex)
             {

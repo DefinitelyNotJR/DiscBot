@@ -42,3 +42,14 @@ C:\programs\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.AssemblyInfoInputs.cache
 C:\programs\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.AssemblyInfo.cs
 C:\programs\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.dll
 C:\programs\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.pdb
+C:\botets\SuccBot\bin\Debug\netcoreapp2.1\SuccBot.deps.json
+C:\botets\SuccBot\bin\Debug\netcoreapp2.1\SuccBot.runtimeconfig.json
+C:\botets\SuccBot\bin\Debug\netcoreapp2.1\SuccBot.runtimeconfig.dev.json
+C:\botets\SuccBot\bin\Debug\netcoreapp2.1\SuccBot.dll
+C:\botets\SuccBot\bin\Debug\netcoreapp2.1\SuccBot.pdb
+C:\botets\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.csprojAssemblyReference.cache
+C:\botets\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.csproj.CoreCompileInputs.cache
+C:\botets\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.AssemblyInfoInputs.cache
+C:\botets\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.AssemblyInfo.cs
+C:\botets\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.dll
+C:\botets\SuccBot\obj\Debug\netcoreapp2.1\SuccBot.pdb
