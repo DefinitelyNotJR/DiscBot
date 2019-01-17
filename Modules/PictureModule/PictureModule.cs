@@ -14,7 +14,7 @@ using SuccBot_master.Handlers;
 
 namespace SuccBot.Modules
 {
-    public class Hug : ModuleBase<SocketCommandContext>
+    public class PictureModule : ModuleBase<SocketCommandContext>
     {
         public PictureService PictureService { get; set; }
 

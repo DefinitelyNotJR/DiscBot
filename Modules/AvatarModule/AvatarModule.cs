@@ -14,7 +14,7 @@ using SuccBot_master.Handlers;
 
 namespace SuccBot.Modules
 {
-    public class Ava : ModuleBase<SocketCommandContext>
+    public class AvatarModule : ModuleBase<SocketCommandContext>
     {
         public PictureService PictureService { get; set; }
 
@@ -79,11 +79,9 @@ namespace SuccBot.Modules
         public async Task CatSenderAsync()
         {
             string url = "https://cataas.com/cat";
-
             var stream = await PictureService.GetPictureAsync(url);
-
             stream.Seek(0, SeekOrigin.Begin);
-
+            
             await Context.Channel.SendFileAsync(stream, "cat.png", embed:
             await EmbedHandler.CreateBasicEmbed($"A cute cat!", "", "attachment://stream.png", Color.Green));
         }
