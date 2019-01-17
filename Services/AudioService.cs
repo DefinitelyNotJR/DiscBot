@@ -17,9 +17,8 @@ namespace SuccBot.Services
     {
         private Lavalink _lavalink;
         private DiscordSocketClient _client;
-        public LavaNode node { get; set; }
-        public LavaPlayer player { get; set; }
-
+        
+        
         public AudioService(Lavalink lavalink, DiscordSocketClient client)
         {
             _lavalink = lavalink;
@@ -35,13 +34,7 @@ namespace SuccBot.Services
         {
             if (user.VoiceChannel == null)
                 return await EmbedHandler.CreateErrorEmbed("Music, Join command", "Please, join voice channel first.");
-            if (node == null)
-            {
-                var node = await _lavalink.AddNodeAsync(_client, new Configuration
-                {
-                    Severity = LogSeverity.Info
-                });
-            }
+            
             await _lavalink.DefaultNode.ConnectAsync(user.VoiceChannel, textChannel);
             return await EmbedHandler.CreateBasicEmbed("Music", $"Bot is now connected to {user.VoiceChannel.Name} and ready to play music", "", Color.Green);
         }
@@ -83,7 +76,7 @@ namespace SuccBot.Services
                 return await EmbedHandler.CreateErrorEmbed("Music, Leave", ex.ToString());
             }
         }
-        public async Task OnFinshed(LavaPlayer player, LavaTrack track, TrackReason reason)
+        public async Task OnFinished(LavaPlayer player, LavaTrack track, TrackReason reason)
         {
             if (reason is TrackReason.LoadFailed || reason is TrackReason.Cleanup)
                 return;
@@ -98,7 +91,6 @@ namespace SuccBot.Services
             {
                 await player.PlayAsync(nextTrack);
                 await LoggingService.LogInformationAsync("Music", $"Bot Now Playing: {nextTrack.Title} - {nextTrack.Uri}");
-                await player.TextChannel.SendMessageAsync("", false, await EmbedHandler.CreateBasicEmbed("Now Playing", $"[{nextTrack.Title}]({nextTrack.Uri})", "", Color.Blue));
             }
         }
     }

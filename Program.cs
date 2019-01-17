@@ -26,7 +26,6 @@ namespace SuccBot
         {
             _client = new DiscordSocketClient();
             _commands = new CommandService();
-            _lavalink = new Lavalink();
             var global = new Global().Initialize();
             _services = new ServiceCollection()
             .AddSingleton(_client)
@@ -36,6 +35,8 @@ namespace SuccBot
             .AddSingleton<AudioService>()
             .AddSingleton<PictureService>()
             .BuildServiceProvider();
+
+            _lavalink = _services.GetRequiredService<Lavalink>();
 
             await HookEvents();
 
@@ -56,6 +57,7 @@ namespace SuccBot
                 {
                     Severity = LogSeverity.Info
                 });
+                node.TrackFinished += _services.GetService<AudioService>().OnFinished;
                 await _client.SetGameAsync(Global.Config.GameStatus);
             }
 

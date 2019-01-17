@@ -22,8 +22,12 @@ namespace SuccBot.Modules
 
         [Command("ava")]
 
-        public async Task AvaAsync(SocketGuildUser user)
+        public async Task AvaAsync(SocketGuildUser user = null)
         {
+            if (user == null)
+            {
+                user = (SocketGuildUser)Context.User;
+            }
             // var builder = new EmbedBuilder()
             // {
             //     ImageUrl = user.GetAvatarUrl(ImageFormat.Auto, 256)

@@ -852,3 +852,136 @@ Caused by: java.lang.RuntimeException: Not success status code: 403
 2019-01-16 15:43:49.411  INFO 10216 --- [XNIO-2 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
 2019-01-16 15:43:49.421  INFO 10216 --- [XNIO-2 I/O-2] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
 2019-01-16 15:43:49.413  INFO 10216 --- [XNIO-2 I/O-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2019-01-17 11:16:16.558  INFO 9708 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        e846411da58078d18b4fed5c2364464583d0df65-SNAPSHOT
+	Build:          718
+	Build time:     14.12.2018 10:42:10 CET
+	Branch          master
+	Commit:         e846411
+	Commit time:    14.12.2018 10:39:42 CET
+	JVM:            11.0.1
+	Lavaplayer      1.3.10
+
+2019-01-17 11:16:16.635  INFO 9708 --- [main] o.s.boot.SpringApplication               :        .   _                  _ _       _    __ _ _
+      /\\ | | __ ___   ____ _| (_)_ __ | | __\ \ \ \
+     ( ( )| |/ _` \ \ / / _` | | | '_ \| |/ / \ \ \ \
+      \\/ | | (_| |\ V / (_| | | | | | |   <   ) ) ) )
+       '  |_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\ / / / /
+    =========================================/_/_/_/
+
+    :: Lavalink    ::       
+    :: Spring Boot ::        (v2.0.4.RELEASE)
+
+
+2019-01-17 11:16:16.848  INFO 9708 --- [main] lavalink.server.Launcher                 : Starting Launcher on DESKTOP-HJK94VR with PID 9708 (C:\programs\SuccBot\Lavalink.jar started by Trading in C:\programs\SuccBot)
+2019-01-17 11:16:16.850  INFO 9708 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2019-01-17 11:16:16.917  INFO 9708 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@11fc564b: startup date [Thu Jan 17 11:16:16 EET 2019]; root of context hierarchy
+2019-01-17 11:16:16.918  WARN 9708 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-01-17 11:16:18.681  INFO 9708 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2019-01-17 11:16:18.699  INFO 9708 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2019-01-17 11:16:18.884  WARN 9708 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2019-01-17 11:16:18.884  WARN 9708 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2019-01-17 11:16:18.913  INFO 9708 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2019-01-17 11:16:18.913  INFO 9708 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1997 ms
+2019-01-17 11:16:18.988  INFO 9708 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-17 11:16:19.008  INFO 9708 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-17 11:16:19.009  INFO 9708 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-17 11:16:19.010  INFO 9708 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-01-17 11:16:19.014  INFO 9708 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-17 11:16:19.015  INFO 9708 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'responseHeaderFilter' to: [/*]
+2019-01-17 11:16:19.995  INFO 9708 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2019-01-17 11:16:20.118  INFO 9708 --- [main] l.s.c.AudioSendFactoryConfiguration      : OS: Windows 10, Arch: amd64
+2019-01-17 11:16:20.125  INFO 9708 --- [main] l.s.c.AudioSendFactoryConfiguration      : JDA-NAS supported system detected. Enabled native audio sending.
+2019-01-17 11:16:20.126  INFO 9708 --- [main] l.s.c.AudioSendFactoryConfiguration      : Setting buffer to 400ms
+2019-01-17 11:16:20.130  INFO 9708 --- [main] l.s.c.AudioSendFactoryConfiguration      : Setting playlist load limit to 6
+2019-01-17 11:16:20.564  WARN 9708 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2019-01-17 11:16:20.606  INFO 9708 --- [main] o.s.w.s.s.s.WebSocketHandlerMapping      : Root mapping to handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2019-01-17 11:16:20.776  INFO 9708 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-17 11:16:21.062  INFO 9708 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@11fc564b: startup date [Thu Jan 17 11:16:16 EET 2019]; root of context hierarchy
+2019-01-17 11:16:21.174  INFO 9708 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/debug/nashorn],methods=[POST]}" onto public java.lang.String lavalink.server.util.DebugRestHandler.getLoadTracks(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2019-01-17 11:16:21.180  INFO 9708 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loadtracks],methods=[GET],produces=[application/json]}" onto public java.util.concurrent.CompletionStage<org.springframework.http.ResponseEntity<java.lang.String>> lavalink.server.player.AudioLoaderRestHandler.getLoadTracks(javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-01-17 11:16:21.185  INFO 9708 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/decodetrack],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.String> lavalink.server.player.AudioLoaderRestHandler.getDecodeTrack(javax.servlet.http.HttpServletRequest,java.lang.String) throws java.io.IOException
+2019-01-17 11:16:21.188  INFO 9708 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/decodetracks],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.String> lavalink.server.player.AudioLoaderRestHandler.postDecodeTracks(javax.servlet.http.HttpServletRequest,java.lang.String) throws java.io.IOException
+2019-01-17 11:16:21.193  INFO 9708 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-17 11:16:21.196  INFO 9708 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-17 11:16:21.245  INFO 9708 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-17 11:16:21.246  INFO 9708 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-17 11:16:21.585  INFO 9708 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-17 11:16:21.598  INFO 9708 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-01-17 11:16:21.665  INFO 9708 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2019-01-17 11:16:21.686  INFO 9708 --- [main] lavalink.server.Launcher                 : Started Launcher in 6.498 seconds (JVM running for 7.477)
+2019-01-17 11:18:30.283  INFO 9708 --- [XNIO-2 task-1] io.undertow.servlet                      : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-17 11:18:30.285  INFO 9708 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-17 11:18:30.318  INFO 9708 --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2019-01-17 11:18:30.417  INFO 9708 --- [XNIO-2 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:63923
+2019-01-17 11:18:30.604  INFO 9708 --- [XNIO-2 task-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2019-01-17 11:18:30.882  INFO 9708 --- [XNIO-2 task-1] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:63923
+2019-01-17 11:19:05.541  INFO 9708 --- [XNIO-2 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:63945
+2019-01-17 11:19:05.568  INFO 9708 --- [XNIO-2 task-2] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2019-01-17 11:19:05.594  INFO 9708 --- [XNIO-2 task-2] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:63945
+2019-01-17 11:19:05.906  INFO 9708 --- [XNIO-2 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"0449da588b3e75493759bb949a501f8a","event":{"token":"fa4c5d7366a747ae","guild_id":"137136959729434624","endpoint":"eu-central361.discord.gg:80"},"op":"voiceUpdate","guildId":"137136959729434624"}
+2019-01-17 11:19:16.471  INFO 9708 --- [XNIO-2 task-3] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2019-01-17 11:19:17.785  INFO 9708 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: snow halation
+2019-01-17 11:19:17.965  INFO 9708 --- [XNIO-2 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAlgIAJVNub3cgSGFsYXRpb24gVFYtU2l6ZSAodmlldHN1YikgNjBmcHMAF0h1eSDEkOG7qWMgTMOqIE5ndXnhu4VuAAAAAAACdOgAC2xNUlQ0cUk3RDBBAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9bE1SVDRxSTdEMEEAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"137136959729434624"}
+2019-01-17 11:19:23.750  INFO 9708 --- [XNIO-2 task-5] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2019-01-17 11:19:24.236  INFO 9708 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: death grips mashup
+2019-01-17 11:22:14.048  INFO 9708 --- [XNIO-2 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:63923 -- CloseStatus[code=1006, reason=]
+2019-01-17 11:22:14.048  INFO 9708 --- [XNIO-2 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:63945 -- CloseStatus[code=1006, reason=]
+2019-01-17 11:22:14.061  INFO 9708 --- [XNIO-2 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2019-01-17 11:22:14.096  INFO 9708 --- [XNIO-2 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2019-01-17 11:22:14.097  INFO 9708 --- [XNIO-2 I/O-3] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2019-01-17 11:22:14.113  INFO 9708 --- [XNIO-2 I/O-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2019-01-17 11:24:30.977  INFO 9708 --- [XNIO-2 task-7] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:64014
+2019-01-17 11:24:31.009  INFO 9708 --- [XNIO-2 task-7] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2019-01-17 11:24:31.028  INFO 9708 --- [XNIO-2 task-7] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:64014
+2019-01-17 11:24:33.809  INFO 9708 --- [XNIO-2 task-8] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:64020
+2019-01-17 11:24:33.820  INFO 9708 --- [XNIO-2 task-8] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2019-01-17 11:24:33.826  INFO 9708 --- [XNIO-2 task-8] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:64020
+2019-01-17 11:24:34.108  INFO 9708 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"19d68e3037416672c1eac8cbad950bc2","event":{"token":"ce71641302ebc4c1","guild_id":"137136959729434624","endpoint":"eu-central361.discord.gg:80"},"op":"voiceUpdate","guildId":"137136959729434624"}
+2019-01-17 11:24:39.546  INFO 9708 --- [XNIO-2 task-9] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2019-01-17 11:24:40.189  INFO 9708 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: snow halation
+2019-01-17 11:24:40.256  INFO 9708 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAlgIAJVNub3cgSGFsYXRpb24gVFYtU2l6ZSAodmlldHN1YikgNjBmcHMAF0h1eSDEkOG7qWMgTMOqIE5ndXnhu4VuAAAAAAACdOgAC2xNUlQ0cUk3RDBBAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9bE1SVDRxSTdEMEEAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"137136959729434624"}
+2019-01-17 11:24:47.962  INFO 9708 --- [XNIO-2 task-11] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2019-01-17 11:24:48.550  INFO 9708 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: death grips feel god inc
+2019-01-17 11:27:20.510  INFO 9708 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAjQIAKUdvcmlsbGF6IGZlYXQuIE1DIFJpZGUgLSBGZWVsIE5vaWRlZCBJbmMuAApkb3Blc21va2VyAAAAAAADctAACzFPcTVCUzhFNUQwAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9MU9xNUJTOEU1RDAAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"137136959729434624"}
+2019-01-17 11:29:31.294  INFO 9708 --- [XNIO-2 task-13] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2019-01-17 11:29:31.890  INFO 9708 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: русские вперед
+2019-01-17 11:31:06.277  INFO 9708 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAlwIAKlRlc3NhIFZpb2xldCAtINCg0YPRgdGB0LrQuNC1INCS0L/QtdGA0LXQtAAT0J/QuNC60YDQuNC7INCfLtCaLgAAAAAAA9hgAAtJa0daazZaUFhMTQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUlrR1prNlpQWExNAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"137136959729434624"}
+2019-01-17 11:34:52.987  INFO 9708 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"137136959729434624"}
+2019-01-17 11:34:53.002  INFO 9708 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"137136959729434624"}
+2019-01-17 11:34:55.494  INFO 9708 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:64014 -- CloseStatus[code=1006, reason=]
+2019-01-17 11:34:55.494  INFO 9708 --- [XNIO-2 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:64020 -- CloseStatus[code=1006, reason=]
+2019-01-17 11:34:55.498  INFO 9708 --- [XNIO-2 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2019-01-17 11:34:55.516  INFO 9708 --- [XNIO-2 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2019-01-17 11:34:55.518  INFO 9708 --- [XNIO-2 I/O-2] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2019-01-17 11:34:55.534  INFO 9708 --- [XNIO-2 I/O-4] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2019-01-17 11:35:23.462  INFO 9708 --- [XNIO-2 task-15] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:64274
+2019-01-17 11:35:23.510  INFO 9708 --- [XNIO-2 task-15] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2019-01-17 11:35:23.639  INFO 9708 --- [XNIO-2 task-15] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:64274
+2019-01-17 11:35:39.982  INFO 9708 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"3cbc540fb63588882221640afa3d22fd","event":{"token":"48635761da96b63b","guild_id":"137136959729434624","endpoint":"eu-central361.discord.gg:80"},"op":"voiceUpdate","guildId":"137136959729434624"}
+2019-01-17 11:35:49.530  INFO 9708 --- [XNIO-2 task-16] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2019-01-17 11:35:50.158  INFO 9708 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: русские вперед
+2019-01-17 11:35:50.200  INFO 9708 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAlwIAKlRlc3NhIFZpb2xldCAtINCg0YPRgdGB0LrQuNC1INCS0L/QtdGA0LXQtAAT0J/QuNC60YDQuNC7INCfLtCaLgAAAAAAA9hgAAtJa0daazZaUFhMTQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUlrR1prNlpQWExNAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"137136959729434624"}
+2019-01-17 11:35:56.733  INFO 9708 --- [XNIO-2 task-18] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2019-01-17 11:35:57.342  INFO 9708 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: mashup mega meme mix
+2019-01-17 11:40:02.424  INFO 9708 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAhgIAHUVYVFJFTUUgTUVNRSBNVVNJQyBNRUdBTUFTSFVQAA9EYXltYW5PdXJTYXZpb3IAAAAAAAhwKAALX2FLdVZBdFlndjQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1fYUt1VkF0WWd2NAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"137136959729434624"}
+2019-01-17 11:50:18.415  INFO 9708 --- [XNIO-2 task-20] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2019-01-17 11:50:19.220  INFO 9708 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: oasis wonderwall
+2019-01-17 11:50:19.358  INFO 9708 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAhgIAI09hc2lzIC0gV29uZGVyd2FsbCAoT2ZmaWNpYWwgVmlkZW8pAAlPYXNpc1ZFVk8AAAAAAAQ98AALYngxQmg4WnZIODQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1ieDFCaDhadkg4NAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"137136959729434624"}
+2019-01-17 11:56:01.187  INFO 9708 --- [XNIO-2 task-22] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2019-01-17 11:56:01.923  INFO 9708 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: your blue eyes
+2019-01-17 11:56:02.052  INFO 9708 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAiwIAJ0xpbXAgQml6a2l0IC0gQmVoaW5kIEJsdWUgRXllcyAtIEx5cmljcwAKV2ludGVyc1NpbgAAAAAABB6wAAs4SUVRcGZBNTI4TQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PThJRVFwZkE1MjhNAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"137136959729434624"}
+2019-01-17 12:03:38.341  INFO 9708 --- [XNIO-2 task-24] l.server.player.AudioLoaderRestHandler   : GET /loadtracks
+2019-01-17 12:03:39.082  INFO 9708 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: behind blue eyes
+2019-01-17 12:03:39.127  INFO 9708 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAiwIAJ0xpbXAgQml6a2l0IC0gQmVoaW5kIEJsdWUgRXllcyAtIEx5cmljcwAKV2ludGVyc1NpbgAAAAAABB6wAAs4SUVRcGZBNTI4TQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PThJRVFwZkE1MjhNAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"137136959729434624"}
+2019-01-17 12:09:51.957  INFO 9708 --- [XNIO-2 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:64274 -- CloseStatus[code=1006, reason=]
+2019-01-17 12:09:52.044  INFO 9708 --- [XNIO-2 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2019-01-17 12:09:52.219  INFO 9708 --- [XNIO-2 I/O-2] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
