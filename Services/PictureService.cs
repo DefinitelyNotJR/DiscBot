@@ -1,8 +1,11 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Discord;
+using Discord.Commands;
 using Discord.WebSocket;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
@@ -34,13 +37,43 @@ namespace SuccBot.Services
             return await resp.Content.ReadAsStreamAsync();
         }
 
+        public async Task<SocketGuildUser> GetUser(SocketCommandContext context, string message = null)
+        {
+            var user = context.Message.MentionedUsers.FirstOrDefault();
+
+            if (message == null)
+            {
+                user = (SocketGuildUser)context.User;
+            }
+            if (user == null)
+            {
+                var users = context.Guild.Users.ToList();
+                List<SocketGuildUser> userList = new List<SocketGuildUser>();
+                foreach (SocketGuildUser u in users)
+                {
+                    if (u.Username.ToLower().Contains(message.ToLower()) || ((u.Nickname ?? "").ToLower().Contains(message.ToLower())))
+
+                    {
+                        userList.Add(u);
+                    }
+                }
+
+                var maybeTheRightUser = userList.First();
+                return maybeTheRightUser;
+            }
+            else
+            {
+                return (SocketGuildUser)user;
+            }
+        }
+
         public async Task<Stream> EditedImageAsync(SocketGuildUser user, string backgroundName, int x, int y)
         {
             var resp = await _http.GetAsync(user.GetAvatarUrl());
             await resp.Content.ReadAsStreamAsync();
             string url = user.GetAvatarUrl(ImageFormat.Auto, 512).ToString();
 
-            string backgroundImagePath = $"Modules/Hug/images/{backgroundName}.jpg";
+            string backgroundImagePath = $"Modules/PictureModule/images/{backgroundName}.jpg";
 
             var backgroundImageStream = new FileStream(backgroundImagePath, FileMode.Open);
 
