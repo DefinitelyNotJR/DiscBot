@@ -5,6 +5,7 @@ using LiteDB;
 using System.Linq;
 using System;
 using SuccBot_master.Handlers;
+using SuccBot_master.Services;
 
 namespace SuccBot.Modules.AddingCommands
 {
@@ -49,7 +50,8 @@ namespace SuccBot.Modules.AddingCommands
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                await LoggingService.LogInformationAsync(ex.Source, ex.Message);
+                await ReplyAsync("", false, await EmbedHandler.CreateErrorEmbed(ex.Source, ex.Message));
             }
         }
 
@@ -72,7 +74,8 @@ namespace SuccBot.Modules.AddingCommands
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                await LoggingService.LogInformationAsync(ex.Source, ex.Message);
+                await ReplyAsync("", false, await EmbedHandler.CreateErrorEmbed(ex.Source, ex.Message));
             }
         }
 
@@ -93,7 +96,8 @@ namespace SuccBot.Modules.AddingCommands
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                await LoggingService.LogInformationAsync(ex.Source, ex.Message);
+                await ReplyAsync("", false, await EmbedHandler.CreateErrorEmbed(ex.Source, ex.Message));
             }
         }
     }
