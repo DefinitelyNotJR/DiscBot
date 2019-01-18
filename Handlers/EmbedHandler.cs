@@ -18,14 +18,12 @@ namespace SuccBot_master.Handlers
             return embed;
         }
 
-
-
         public static async Task<Embed> CreateErrorEmbed(string source, string error)
         {
             var embed = await Task.Run(() => new EmbedBuilder()
                 .WithTitle($"ERROR OCCURED FROM - {source}")
-                .WithDescription($"**Error Deaitls**: \n{error}")
-                .WithColor(Color.DarkRed)
+                .WithDescription($"**Error Details**: \n{error}")
+                .WithColor(Color.Red)
                 .WithCurrentTimestamp().Build());
             return embed;
         }

@@ -10,6 +10,7 @@ using System.Net.Http;
 using Victoria;
 using SuccBot_master.Handlers;
 using SuccBot_master.Services;
+using LiteDB;
 
 namespace SuccBot
 {
@@ -34,6 +35,7 @@ namespace SuccBot
             .AddSingleton<Lavalink>()
             .AddSingleton<AudioService>()
             .AddSingleton<PictureService>()
+            .AddSingleton(new LiteDatabase("CommandsData.db"))
             .BuildServiceProvider();
 
             _lavalink = _services.GetRequiredService<Lavalink>();
