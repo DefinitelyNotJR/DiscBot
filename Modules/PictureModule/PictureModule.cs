@@ -11,6 +11,7 @@ using SixLabors.ImageSharp.Processing;
 using SixLabors.Primitives;
 using SixLabors.Shapes;
 using SuccBot_master.Handlers;
+using System;
 
 namespace SuccBot.Modules
 {
@@ -38,6 +39,24 @@ namespace SuccBot.Modules
 
             await Context.Channel.SendFileAsync(stream, "stream.png", embed:
             await EmbedHandler.CreateBasicEmbed($"{user.Username} is a gorilla now", "", "attachment://stream.png", Color.DarkOrange));
+        }
+
+        [Command("gelbooru", RunMode = RunMode.Async)]
+        public async Task GelbooruAsync([Remainder]string tag = null)
+        {
+            await ReplyAsync("", false, await PictureService.GelbooruSearchAsync(tag, (SocketTextChannel)Context.Channel));
+        }
+
+        [Command("hnk", RunMode = RunMode.Async)]
+        public async Task HousekiAsync([Remainder]string tag = null)
+        {
+            await ReplyAsync("", false, await PictureService.HousekiSearchAsync(tag, (SocketTextChannel)Context.Channel));
+        }
+
+        [Command("nsfw", RunMode = RunMode.Async)]
+        public async Task NsfwAsync([Remainder]string tag = null)
+        {
+            await ReplyAsync("", false, await PictureService.NsfwAsync(tag, (SocketTextChannel)Context.Channel));
         }
     }
 }

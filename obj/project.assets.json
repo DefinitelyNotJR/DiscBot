@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "BooruSharp/1.3.6": {
+        "type": "package",
+        "compile": {
+          "lib/net45/BooruSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net45/BooruSharp.dll": {}
+        }
+      },
       "Discord.Net/2.0.0-beta2-01039": {
         "type": "package",
         "dependencies": {
@@ -876,6 +885,19 @@
     }
   },
   "libraries": {
+    "BooruSharp/1.3.6": {
+      "sha512": "LPanpHQeCmhg8a5LuCsI1xN2vZiB9IMxlNuyFAqJY4MZhDmSXW3SZdguDNaFj/PdmXcGNQl5/e3kJJgt8Ys4ww==",
+      "type": "package",
+      "path": "boorusharp/1.3.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "boorusharp.1.3.6.nupkg.sha512",
+        "boorusharp.nuspec",
+        "lib/net45/BooruSharp.dll",
+        "lib/net45/BooruSharp.pdb"
+      ]
+    },
     "Discord.Net/2.0.0-beta2-01039": {
       "sha512": "Yq7O9zCWb0GRtvHnfahA08mQqfy5uK+u7a2MbTvbSsWMKw/BgyEDmxpGIjhuKrYU87w0XaXzpZVXKlAoVY6zwA==",
       "type": "package",
@@ -2945,6 +2967,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "BooruSharp >= 1.3.6",
       "Discord.Net >= 2.0.0-beta2-01039",
       "LiteDB >= 4.1.4",
       "Microsoft.NETCore.App >= 2.1.0",
@@ -2996,6 +3019,10 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "BooruSharp": {
+            "target": "Package",
+            "version": "[1.3.6, )"
+          },
           "Discord.Net": {
             "target": "Package",
             "version": "[2.0.0-beta2-01039, )"
@@ -3037,5 +3064,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BooruSharp 1.3.6' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "BooruSharp",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    }
+  ]
 }

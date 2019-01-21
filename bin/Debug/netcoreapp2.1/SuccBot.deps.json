@@ -1,13 +1,14 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "3156e1484af00c72073b76b38610167a0a9d5af0"
+    "signature": "d606d8f18fea48f0f1806305d5a0993e364701f5"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "SuccBot/1.0.0": {
         "dependencies": {
+          "BooruSharp": "1.3.6",
           "Discord.Net": "2.0.0-beta2-01039",
           "LiteDB": "4.1.4",
           "SixLabors.ImageSharp": "1.0.0-beta0005",
@@ -18,6 +19,14 @@
         },
         "runtime": {
           "SuccBot.dll": {}
+        }
+      },
+      "BooruSharp/1.3.6": {
+        "runtime": {
+          "lib/net45/BooruSharp.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
         }
       },
       "Discord.Net/2.0.0-beta2-01039": {
@@ -538,6 +547,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "BooruSharp/1.3.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LPanpHQeCmhg8a5LuCsI1xN2vZiB9IMxlNuyFAqJY4MZhDmSXW3SZdguDNaFj/PdmXcGNQl5/e3kJJgt8Ys4ww==",
+      "path": "boorusharp/1.3.6",
+      "hashPath": "boorusharp.1.3.6.nupkg.sha512"
     },
     "Discord.Net/2.0.0-beta2-01039": {
       "type": "package",

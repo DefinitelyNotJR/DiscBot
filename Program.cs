@@ -62,7 +62,6 @@ namespace SuccBot
                 node.TrackFinished += _services.GetService<AudioService>().OnFinished;
                 await _client.SetGameAsync(Global.Config.GameStatus);
             }
-
             catch (Exception ex)
             {
                 await LoggingService.LogInformationAsync(ex.Source, ex.Message);

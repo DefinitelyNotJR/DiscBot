@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using BooruSharp.Booru;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
@@ -11,6 +12,7 @@ using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
 using SixLabors.Primitives;
+using SuccBot_master.Handlers;
 
 namespace SuccBot.Services
 {
@@ -116,9 +118,47 @@ namespace SuccBot.Services
             }
         }
 
+        public async Task<Embed> HousekiSearchAsync(string tag, SocketTextChannel channel, string title = "This makes me *rock* hard...")
+        {
+            var tags = $"houseki_no_kuni {tag}";
+            return await GelbooruSearchAsync(tags, channel, title);
+        }
 
+        public async Task<Embed> NsfwAsync(string tag, SocketTextChannel channel, string title = "Oh my")
+        {
+            var tags = $"rating:explicit {tag}";
+            if (!(channel.IsNsfw))
+            {
+                return await EmbedHandler.CreateErrorEmbed("Nsfw", "You must be in Nsfw channel to use this command");
+            }
+            return await GelbooruSearchAsync(tags, channel, title);
+        }
+        public async Task<Embed> GelbooruSearchAsync(string tag, SocketTextChannel channel, string title = null)
+        {
+
+            if (tag == null)
+            {
+                return await EmbedHandler.CreateErrorEmbed("Gelbooru command", "You forgot to add tags");
+            }
+
+            else
+            {
+                if (!(channel.IsNsfw))
+                {
+                    tag = $"{tag} rating:safe";
+                }
+                try
+                {
+                    Gelbooru booru = new Gelbooru();
+                    var result = await booru.GetRandomImage(tag);
+                    return await EmbedHandler.CreateBasicEmbed(title ?? "I hope y-you will like it:", "", result.fileUrl.ToString(), Color.Gold);
+                }
+                catch (Exception ex)
+                {
+                    return await EmbedHandler.CreateErrorEmbed(ex.Source, ex.Message);
+                }
+            }
+        }
     }
-
-
 }
 
