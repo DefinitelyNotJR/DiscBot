@@ -11,6 +11,7 @@ using Victoria;
 using SuccBot_master.Handlers;
 using SuccBot_master.Services;
 using LiteDB;
+using System.Linq;
 
 namespace SuccBot
 {
@@ -79,6 +80,26 @@ namespace SuccBot
             _services.GetRequiredService<CommandService>().Log += LogAsync;
             _lavalink.Log += LogAsync;
             _client.Ready += OnReadyAsync;
+            _client.UserJoined += OnUserJoined;
+            _client.UserUpdated += OnUserUpdated;
+        }
+
+        private async Task OnUserUpdated(SocketUser arg1, SocketUser arg2)
+        {
+
+            var guild = _client.GetGuild(136520569297436672);
+            var logsChannel = _client.GetChannel(537254254209925141) as SocketTextChannel;
+            if (!(arg1.Username == arg2.Username))
+                await logsChannel.SendMessageAsync($"The user previously known as **{arg1.Username}** changed his username to **{arg2.Username}**  (user Id: {arg1.Id}");
+        }
+
+        private async Task OnUserJoined(SocketGuildUser guildUser)
+        {
+            var guilds = guildUser.Guild;
+            var channels = guilds.Channels;
+            var channelList = channels.ToList();
+            var channel = (channelList.Find(x => x.Name == "logs")) as SocketTextChannel;
+            await channel.SendMessageAsync($"A user has joined: **{guildUser.Username}** (user Id: **{guildUser.Id}**)");
         }
 
         public async Task RegisterCommandsAsync()

@@ -120,13 +120,13 @@ namespace SuccBot.Services
 
         public async Task<Embed> HousekiSearchAsync(string tag, SocketTextChannel channel, string title = "This makes me *rock* hard...")
         {
-            var tags = $"houseki_no_kuni {tag}";
+            var tags = $"houseki_no_kuni -bad_anatomy {tag}";
             return await GelbooruSearchAsync(tags, channel, title);
         }
 
         public async Task<Embed> NsfwAsync(string tag, SocketTextChannel channel, string title = "Oh my")
         {
-            var tags = $"rating:explicit {tag}";
+            var tags = $"rating:explicit -bad_anatomy {tag}";
             if (!(channel.IsNsfw))
             {
                 return await EmbedHandler.CreateErrorEmbed("Nsfw", "You must be in Nsfw channel to use this command");
@@ -145,7 +145,7 @@ namespace SuccBot.Services
             {
                 if (!(channel.IsNsfw))
                 {
-                    tag = $"{tag} rating:safe";
+                    tag = $"-bad_anatomy {tag} rating:safe";
                 }
                 try
                 {

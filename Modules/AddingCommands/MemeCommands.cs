@@ -31,7 +31,7 @@ namespace SuccBot.Modules.AddingCommands
             try
             {
                 var db = _database.GetCollection<CommandDb>("commands");
-                var results = db.Find(x => ((x.GuildId == Context.Guild.Id) && (x.CommandName.Contains(commandName))));
+                var results = db.Find(x => ((x.GuildId == Context.Guild.Id) && (x.CommandName == commandName)));
                 if (!(results == null))
                 {
                     await ReplyAsync("", false, await EmbedHandler.CreateErrorEmbed("AddCommand", "A command with this name already exists."));
@@ -56,7 +56,7 @@ namespace SuccBot.Modules.AddingCommands
         }
 
         [Command("!!", RunMode = RunMode.Async)]
-        
+
         public async Task SayCommandAsync(string commandName)
         {
             try
