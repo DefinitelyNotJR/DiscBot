@@ -10,6 +10,7 @@ using Victoria;
 using Victoria.Entities;
 using Victoria.Entities.Enums;
 using System.Linq;
+using System.Text;
 
 namespace SuccBot.Services
 {
@@ -89,6 +90,19 @@ namespace SuccBot.Services
             {
                 await LoggingService.LogInformationAsync(ex.Source, ex.Message);
             }
+        }
+
+        public async Task<Embed> QueueAsync(ulong guildId)
+        {
+            var player = _lavalink.DefaultNode.GetPlayer(guildId);
+            var descriptionBuilder = new StringBuilder();
+            var trackNum = 1;
+            foreach (var track in player.Queue.Items)
+            {
+                descriptionBuilder.Append($"{trackNum}: {track.Title} ({track.Uri})\n");
+                trackNum++;
+            }
+            return await EmbedHandler.CreateBasicEmbed("Queue", $"{descriptionBuilder.ToString()}","", Color.Green);
         }
 
         public async Task<Embed> NowPlayingAsync(ulong guildId)

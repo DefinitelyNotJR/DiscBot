@@ -50,5 +50,11 @@ namespace SuccBot.Modules.AudioModule
         {
             await ReplyAsync("", false, await AudioService.NowPlayingAsync(Context.Guild.Id));
         }
+
+        [Command("queue", RunMode = RunMode.Async)]
+        public async Task QueueAsync()
+        {
+            await ReplyAsync("", false, await AudioService.QueueAsync(Context.Guild.Id));
+        }
     }
 }
